@@ -5,5 +5,5 @@ function playSound () {
 
 
 
-document.querySelector('.tecla_pom');
+document.querySelector('.tecla_pom').onclick = playSound;
 
