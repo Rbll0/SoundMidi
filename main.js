@@ -4,16 +4,24 @@ function playSound (idElementAudio) {
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
-listaDeTeclas[0].onclick = playSound;
-
 let contador = 0;
 
 while (contador < listaDeTeclas.length ){
-    listaDeTeclas[contador].onclick = function () {
-        playSound('#som_tecla_pom')
-    }
 
-    // contador = (contador + 1);
+    const tecla = listaDeTeclas[contador];
+    
+    const instrumento = tecla.classList[1];
+
+    console.log(instrumento);
+
+    const idSound = `#som_${instrumento}`;
+
+    console.log(idSound);
+
+
+    tecla.onclick = function () {
+        playSound(idSound);
+    }
 
     contador += 1;
 
