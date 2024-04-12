@@ -9,7 +9,9 @@ listaDeTeclas[0].onclick = playSound;
 let contador = 0;
 
 while (contador < listaDeTeclas.length ){
-    listaDeTeclas[contador].onclick = playSound;
+    listaDeTeclas[contador].onclick = function () {
+        playSound('#som_tecla_pom')
+    }
 
     // contador = (contador + 1);
 
